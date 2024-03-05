@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: space-between;
+    min-width: min-content;
+    padding: 0 4rem;
+    width: 100vw;
+    height: 8rem;
+    background-color: #2d3250;
+
+    div {
+        color: #ffffff;
+        font-weight: 600;
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    text-decoration: none;
+
+    li {
+        list-style-type: none;
+    }
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
