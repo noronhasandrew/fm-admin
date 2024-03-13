@@ -1,0 +1,34 @@
+.mainForm {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 2rem;
+    box-shadow: 5px 10px 10px #ccc;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    align-self: end;
+    gap: 1rem;
+}
+
+.formButton {
+    height: 3rem;
+    width: 10rem;
+    margin-top: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: #0197b6;
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: 3px 3px 5px #cccccc;
+}
+
+.reset {
+    background-color: transparent;
+    color: #0197b6;
+    border: 0.1rem solid #0197b6;
+}

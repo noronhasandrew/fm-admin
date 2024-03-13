@@ -4,6 +4,7 @@ export const InspirationContext = createContext({
   content: "",
   addContent: () => {},
   deleteContent: () => {},
+  updateInterview: () => {},
   references: undefined,
   image: undefined,
   interview: undefined,
@@ -21,6 +22,16 @@ const inspirationReducer = (state, action) => {
     return {
       ...state,
       content: action.payload.text,
+    };
+  }
+
+  if (action.type === "UPDATE_INTERVIEW") {
+    return {
+      ...state,
+      interview: {
+        author: action.payload.author,
+        date: action.payload.date,
+      },
     };
   }
   return state;
@@ -50,9 +61,20 @@ export const InspContextProvider = ({ children, initialState }) => {
     });
   };
 
+  const handleUpInterview = (author, date) => {
+    inspDispatch({
+      type: "UPDATE_INTERVIEW",
+      payload: {
+        author,
+        date,
+      },
+    });
+  };
+
   const ctxValue = {
     content: inspState.content,
     interview: inspState.interview,
+    updateInterview: handleUpInterview,
     addContent: handleAddContent,
     deleteContent: handleDeleteContent,
   };

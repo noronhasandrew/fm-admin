@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import classes from "./MainNavigation.module.css";
+import styles from "./MainNavigation.module.css";
 
 function MainNavigation() {
   return (
     <header>
       <div>Logo</div>
       <nav>
-        <ul className={classes.list}>
+        <ul className={styles.list}>
           <li>
             <Link>Lista de Músicas</Link>
           </li>
